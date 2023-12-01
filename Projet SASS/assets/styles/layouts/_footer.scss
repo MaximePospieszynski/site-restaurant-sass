@@ -4,15 +4,27 @@ footer {
     padding: 65px 32px;
     color: #eee;
 
+    @media screen and (max-width: 680px) {
+        background: none;
+    }
+
     .footer-content {
         display: grid;
         grid-template-columns: 50% 50%;
         max-width: 1000px;
         margin: 0 auto;
 
+        @media screen and (max-width: 680px) {
+            grid-template-columns: 1fr;
+        }
+
         .left-part {
             padding-right: 30px;
             line-height: 30px;
+
+            @media screen and (max-width: 680px) {
+                display: none;
+            }
 
             h2 {
                 font-family: $font1;
@@ -31,6 +43,10 @@ footer {
         .right-part {
             padding-left: 50px;
 
+            @media screen and (max-width: 680px) {
+                padding-left: 20px;
+            }
+
             h3 {
                 font-size: 0.85rem;
             }
@@ -40,11 +56,22 @@ footer {
                 background: none;
                 border: 1px solid rgba(166, 114, 69, 0.151);
                 padding: 5px 10px;
+                width: 250px;
+
+                @media screen and (max-width: 680px) {
+                    width: 150px;
+                }
             }
 
             .follow-us {
                 display: flex;
                 margin-top: 50px;
+
+                h3 {
+                    @media screen and (max-width: 680px) {
+                        display: none;
+                    }
+                }
 
                 ul {
                     @include alignChildren(space-around);
